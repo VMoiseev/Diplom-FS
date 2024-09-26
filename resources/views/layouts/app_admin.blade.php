@@ -86,7 +86,7 @@
                             @csrf
                             <label class="conf-step__label conf-step__label-fullsize" for="hall_name">
                                 Название зала
-                                <input class="conf-step__inputв" type="text" placeholder="Например, &laquo;Зал 1&raquo;" name="hall_name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode > 44 && event.charCode < 47) || (event.charCode > 47 && event.charCode < 58)" required>
+                                <input class="conf-step__inputв" type="text" placeholder="Например, &laquo;Зал 1&raquo;" name="hall_name" required>
                             </label>
                             <div class="conf-step__buttons text-center">
                                 <button type="submit" value="Добавить зал" class="conf-step__button conf-step__button-accent">Добавить зал</button>

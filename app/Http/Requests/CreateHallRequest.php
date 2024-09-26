@@ -25,7 +25,7 @@ class CreateHallRequest extends FormRequest
     {
         return [
             'hall_name' => 'required|unique:halls',
-            'hall_name' => 'regex:/[a-z0-9-\.]/i',
+            'hall_name' => 'regex:/[а-яА-Я0-9-\.]/i',
         ];
     }
 
@@ -33,7 +33,7 @@ class CreateHallRequest extends FormRequest
     {
         return [
             'hall_name.unique' => ' Такое имя зала уже существует! Введите другое имя зала.',
-            'hall_name.regex' => ' В имени зала присутствуеут как минимум один символ, не являющийся латинской буквой, цифрой, точкой или тире!',          
+            'hall_name.regex' => ' В имени зала присутствуеут как минимум один символ, не являющийся латинской буквой, цифрой, точкой или тире!',
         ];
     }
 
