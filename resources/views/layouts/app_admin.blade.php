@@ -13,7 +13,7 @@
 <body>
 <header class="page-header">
     <h1 class="page-header__title">Идём<span>в</span>кино</h1>
-    <span class="page-header__subtitle">Администраторская</span>
+    <span class="page-header__subtitle">Администраторррская</span>
     <h3 style="margin-top: 20px;  margin-bottom: 10px;" class="conf-step__title">админ<span>:</span>{{ Auth::user()->email }}</h3>
     <a style="text-decoration: none;" href="{{ route('user.logout') }}"><h2 class="conf-step__title" style="color:blue;">выйти</h2></a>
 </header>
@@ -630,6 +630,7 @@
                             </div>
                             <span name="popupWarning1" style="display: none; color: red; margin-top: 15px; font-size: 150%">Заполни поле "Время начала сеанса"!</span>
                             <span name="popupWarning2" style="display: none; color: red; margin-top: 15px; font-size: 150%">Указанное время начала сеанса некорректно! Есть пересечения с другими сеансами на этот день для данного зала.</span>
+                            <span name="popupWarning3" style="display: none; color: red; margin-top: 15px; font-size: 150%">Фильм не успеет закончиться! Выберите более раннее время, пожалуйста!"!</span>
                         </form>
                     </div>
                 </div>

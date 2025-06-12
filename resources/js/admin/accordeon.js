@@ -591,6 +591,7 @@ popupFilmSessionAdd.addEventListener('click', (event) => { // клик-собы�
     for (let d = 0; d < FilmParameters.length; d++) {
       if (FilmParameters[d].film_name === currentFilmName) {
         currentFilmDuration = FilmParameters[d].film_duration; // определяем продолжительность выбранного в форме фильма
+
         currentPosterPath = FilmParameters[d]. poster_path;    // определяем постер выбранного в форме фильма
       }
     }
@@ -598,6 +599,15 @@ popupFilmSessionAdd.addEventListener('click', (event) => { // клик-собы�
     const startPixel = Math.floor(((Number(currentHours) * 60) + Number(currentMinutes)) * 0.5);  // левая граница значка сеанса в px (с округлением в мЕньшую сторону)
     const stopPixel = Math.ceil(startPixel + (currentFilmDuration * 0.5));                        // правая граница значка сеанса в px (с округлением в бОльшую сторону)
     filmSessions = document.getElementById('Seances_Plans').querySelectorAll('div[name="filmSession"]'); // переопределение коллекции всех сеансов в Сетке Сеансов
+
+
+
+    const endOfDay = new Date();
+        if (currentFilmDuration < (endOfDay - startPixel)) {  // проверка: успеет ли фильм закончиться до конца дня
+            popupFilmSessionAdd.querySelector('span[name="popupWarning3"]').style.display = 'block';
+          return;
+        }
+
 
     if (filmSessions) {   // проверка: пересекается по времени создаваемый сеанс с уже существующими или не пересекается
       filmSessionsLength = filmSessions.length;

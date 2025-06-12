@@ -13,7 +13,7 @@
 <body>
 <header class="page-header">
     <h1 class="page-header__title">Идём<span>в</span>кино</h1>
-    <span class="page-header__subtitle">Администраторская</span>
+    <span class="page-header__subtitle">Администраторррская</span>
 </header>
 
 <main class="conf-steps">
@@ -34,7 +34,7 @@
 
                     <label class="conf-step__label conf-step__label-fullsize" for="password">
                         Ваш пароль
-                        <input class="conf-step__inputв" type="text" id="password" placeholder="введите пароль" name="password" required>
+                        <input class="conf-step__inputв" type="password" id="password" placeholder="введите пароль" name="password" required>
                     </label>
 
                     <label>

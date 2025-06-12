@@ -132,6 +132,7 @@ class TodoController extends Controller
             'sessionsDayPlanTables' => $this->sessionsDayPlanTables,
             'allTables' => $this->allTables
         ])->with('success', 'Новый зал успешно добавлен');
+
     }
 
     /**
